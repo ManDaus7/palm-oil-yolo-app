@@ -23,7 +23,7 @@ if uploaded_file is not None:
     image_np = np.array(image)
 
     # Predict using YOLOv8
-    results = model.predict(source=image_np, conf=0.25, imgsz=640)
+    results = model.predict(source=image_np, conf=0.5, imgsz=640)
 
     # Show result
     for r in results:
