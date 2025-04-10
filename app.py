@@ -6,16 +6,8 @@ import numpy as np
 # Title
 st.title("🌴 Palm Oil Fruit Ripeness Detection")
 
-model_choice = st.radio("Choose Model", ["YOLOv8", "YOLOv12"])
-
-# Set the model path based on user selection
-if model_choice == "YOLOv8":
-    model_path = 'C:/Users/H P/PycharmProjects/FYP/runs/detect/train/weights/best.pt'  # Update with YOLOv8 model path
-elif model_choice == "YOLOv12":
-    model_path = 'C:/Users/H P/PycharmProjects/FYP/runs/detect/train2/weights/best.pt'  # Update with YOLOv12 model path
-
 # Load model
-model = YOLO(model_path)
+model = YOLO(best.pt)
 
 # Upload Image
 uploaded_file = st.file_uploader("Upload a palm fruit bunch image", type=["jpg", "png", "jpeg"])
