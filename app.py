@@ -2,6 +2,7 @@ import streamlit as st
 from ultralytics import YOLO
 from PIL import Image
 import numpy as np
+import cv2
 
 # Title
 st.title("🌴 Palm Oil Fruit Ripeness Detection")
