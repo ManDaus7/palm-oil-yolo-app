@@ -1,3 +1,6 @@
+import os
+os.environ["STREAMLIT_WATCH_DIR"] = "false"
+
 import streamlit as st
 from ultralytics import YOLO
 from PIL import Image
