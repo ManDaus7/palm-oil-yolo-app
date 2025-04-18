@@ -14,7 +14,7 @@ model = YOLO("best.pt")
 uploaded_file = st.file_uploader("Upload a palm fruit bunch image", type=["jpg", "png", "jpeg"])
 
 if uploaded_file is not None:
-    image = Image.open(uploaded_file)
+    image = Image.open(uploaded_file).convert('RGB')
     st.image(image, caption="Original Image", use_container_width=True)
 
     st.write("Detecting...")
