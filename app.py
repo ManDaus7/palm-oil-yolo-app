@@ -11,7 +11,7 @@ import cv2
 st.title("🌴 Palm Oil Fruit Ripeness Detection")
 
 # Load model
-model = YOLO("best.pt")
+model = YOLO("best.pt", verbose=False)
 
 # Upload Image
 uploaded_file = st.file_uploader("Upload a palm fruit bunch image", type=["jpg", "png", "jpeg"])
